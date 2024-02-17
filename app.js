@@ -81,7 +81,7 @@ app.put('/players/:playerId/', async (request, response) => {
 
   const updateQuiry = `UPDATE cricket_team
     SET
-    player_name = "${playerName}",jersey_number =  ${jerseyNumber} ,role = "${role}";
+    player_name = "${playerName}",jersey_number =  ${jerseyNumber} ,role = "${role}"
     WHERE player_id = ${playerId};`
 
   await DB.run(updateQuiry)
